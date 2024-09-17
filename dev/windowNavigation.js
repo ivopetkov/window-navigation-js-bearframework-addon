@@ -242,6 +242,7 @@ ivoPetkov.bearFrameworkAddons.windowNavigation = ivoPetkov.bearFrameworkAddons.w
             updateCurrentStateID();
             await dispatchOnChange();
         }
+        return true;
     };
 
     var reload = function () {
