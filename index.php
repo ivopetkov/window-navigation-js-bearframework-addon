@@ -13,7 +13,7 @@ $app = App::get();
 $context = $app->contexts->get(__DIR__);
 
 $app->clientPackages
-    ->add('windowNavigation', function (IvoPetkov\BearFrameworkAddons\ClientPackage $package) use ($context) {
+    ->add('windowNavigation', function (IvoPetkov\BearFrameworkAddons\ClientPackage $package) use ($context): void {
         $package->addJSCode(include $context->dir . '/assets/windowNavigation.min.js.php');
         //$package->addJSCode(file_get_contents($context->dir . '/dev/windowNavigation.js'));
         $package->get = 'return ivoPetkov.bearFrameworkAddons.windowNavigation';
